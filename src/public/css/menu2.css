@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100px;
+    height: auto;
+}
+
+.card {
+    width: 20%;
+    cursor: pointer;
+    border: 1px solid #e9eaea;
+    border-radius: 3px;
+}
+
+.text-box {
+    padding: 15px;
+}
+
+.content-img {
+    padding: 10px 0;
+    text-align: center;
+    background: #e1f3ff;
+}
+
+.date {
+    font-size: 10px;
+    margin-top: 5px;
+}

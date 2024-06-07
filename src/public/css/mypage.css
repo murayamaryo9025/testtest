@@ -1,0 +1,72 @@
+.body {
+    display: flex;
+}
+
+
+.reservation_ttl {
+    font-size: 10px;
+}
+
+.reservation_inner {
+    font-size: 20px;
+}
+
+.card {
+    color: #fff;
+    background-color: blue;
+    width: 450px;
+    height: 300px;
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 3px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+}
+
+.card2 {
+    width: 25%;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 5px 5px 5px 5px;
+}
+
+.detail_btn {
+    text-align: left;
+    margin: 0px 0px 2px 2px;
+}
+
+.b_btn {
+    color: #fff;
+    background-color: #00f;
+}
+
+.content-img img {
+    width: 100%;
+}
+
+.card-group {
+    width: 1000px;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card3 {
+    width: 25%;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 5px 5px 5px 5px;
+}
+
+.content-img2 img {
+    width: 100%;
+}
+
+.b_btn2 {
+    color: #fff;
+    background-color: #00f;
+}

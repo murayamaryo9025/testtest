@@ -1,0 +1,138 @@
+.body {
+display: flex;
+}
+
+
+.reservation_ttl {
+font-size: 10px;
+}
+.reservation_inner {
+font-size: 20px;
+}
+
+.card {
+color: #fff;
+background-color: blue;
+width: 450px;
+height: 300px;
+cursor: pointer;
+border: 2px solid #000;
+border-radius: 3px;
+margin-left: 20px;
+margin-top: 20px;
+}
+
+.container {
+display: flex;
+}
+
+.card2 {
+width: 25%;
+border-radius: 10px;
+box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+padding: 5px 5px 5px 5px;
+}
+
+.detail_btn {
+text-align: left;
+margin: 0px 0px 2px 2px;
+}
+
+.b_btn {
+color: #fff;
+background-color: #00f;
+}
+
+.content-img img{
+width: 100%;
+}
+
+.card-group {
+width: 1000px;
+height: auto;
+display: flex;
+justify-content: flex-end;
+}
+
+.card3 {
+width: 25%;
+border-radius: 10px;
+box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+padding: 5px 5px 5px 5px;
+}
+
+.content-img2 img {
+width: 100%;
+}
+
+.b_btn2 {
+color: #fff;
+background-color: #00f;
+}
+
+
+
+@extends('layouts.app')
+
+@section('css')
+
+@endsection
+
+@section('content')
+
+<body>
+  <div class="reservation_ttl">
+    <h1 class="reservation_inner">
+      予約状況
+    </h1>
+  </div>
+  <div class="card">
+    <div class="card_list">
+      <div class="card_title">
+        <p>予約1</p>
+      </div>
+      <table>
+        <tr>
+          <ul>Shop</ul>
+          <ul>Date</ul>
+          <ul>Time</ul>
+          <ul>Number</ul>
+        </tr>
+      </table>
+    </div>
+  </div>
+  </div>
+
+  <div class="card-group">
+    <h1 class="favorite-list">
+      お気に入り店舗
+    </h1>
+    <div class="card2">
+      <div class="content-img">
+        <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/sushi.jpg" />
+      </div>
+      <div class="text">
+        <h2>仙人</h2>
+        <p class="p_text">#東京都#寿司</p>
+      </div>
+      <form class="detail_btn" action="/detail/:shop_id" method="post">
+        
+        <button class="b_btn">詳しく見る</button>
+      </form>
+    </div>
+    <div class="card3">
+      <div class="content-img2">
+        <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/yakiniku.jpg" />
+      </div>
+      <div class="text">
+        <h2>牛助</h2>
+        <p class="p_text">#大阪府#焼肉</p>
+      </div>
+      <form class="detail_btn" action="/detail/:shop_id" method="post">
+        
+        <button class="b_btn2">詳しく見る</button>
+      </form>
+    </div>
+  </div>
+</body>
+@endsection

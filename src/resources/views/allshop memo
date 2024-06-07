@@ -1,15 +1,39 @@
-@section('css')
-<link rel="stylesheet" href="{{ asset('css/menu2.css') }}">
-@endsection
-
-@section('content')
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rase</title>
+    
+</head>
 <body>
     <header class="header">
-        <h1 class="header-ttl">
-            <a href="">Rase</a>
-        </h1>
-        <div class="header-nav">
-            <select name="area" id="area-select">
+    <div class="header__inner">
+      <div class="header-utilities">
+        <a class="header__logo">
+          Rase
+        </a>
+        <nav>
+            <ul class="header-nav">
+              @if (Auth::check())
+              <li class="header-nav__item">
+                 <form class="form" action="/"  method="post">
+                 <button class="header-nav__button">Registration</button>
+                 </form>
+              </li>
+              <li class="header-nav__item">
+                 <form class="form" action="/logout" method="post">
+                     
+                     <button class="header-nav__button">Logout</button>
+                 </form>
+              </li>
+              @endif
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+    <select name="area" id="area-select">
                 <option value="">--all area--</option>
                 <option value="東京都">東京都</option>
                 <option value="大阪府">大阪府</option>
@@ -23,17 +47,15 @@
                 <option value="イタリアン">イタリアン</option>
                 <option value="ラーメン">ラーメン</option>
             </select>
-            <form action="search.html">
+            <form action="form" action="/" method="post">
+                
                 <div class="search_box">
                     <input type="text" placeholder="Search..." />
                 </div>
             </form>
-        </div>
-    </header>
 </body>
 
-
-
+@section('content')
  <div class="card">
     <div class="card_img">
         <img src="https://coachtech-matter.s3-ap-northeast-1.amazonaws.com/image/sushi.jpg" alt=""/>
@@ -315,3 +337,6 @@
             <input type="button" value="詳しく見る">
         </div>
     </div>
+</body>
+</html>
+@endsection('content')

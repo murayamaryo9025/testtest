@@ -1,10 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
-use App\Http\Controllers\HelloController;
-use App\Http\Controllers\SessionController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ShopdetailController;
+use App\Http\Controllers\MypageController;
+use App\Http\Controllers\ShopallController;
+use App\Http\Controllers\ReservationC;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +17,11 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/', [TestController::class, 'index']);
-Route::get('/hello', [HelloController::class, 'index']);
-Route::get('/session', [SessionController::class, 'getSes']);
-Route::post('/session', [SessionController::class, 'postSes']);
 Route::middleware('auth')->group(function () {
      Route::get('/', [AuthController::class, 'index']);
 });
+Route::post('/mypage',[MypageController::class, 'index']);
+Route::post('/thanks',[thanksController::class, 'index']);
+Route::post('/detail/:shop_id',[ShopdetailController::class,'index']);
+Route::post('/shopall',[ShopallController::class, 'index']);
+Route::post('/done',[ReservationC::class, 'index']);

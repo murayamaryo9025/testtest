@@ -6,16 +6,9 @@
     <title>Rase</title>
 </head>
 <body>
-    <div class="container">
-        <div class="">
-            <p></p>
-        </div>
+    <h1>Rase</h1>
+    <div class="reservation_text">
+        <p>会員登録ありがとうございます</p>
     </div>
-    <div>
-        <header class="user_name">
-            
-        </header>
-    </div>
-    
 </body>
 </html>

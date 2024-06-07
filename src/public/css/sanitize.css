@@ -72,7 +72,7 @@ body {
 */
 
 h1 {
-    margin: 0.67em 0;
+    margin: 0.67em 0 0 ;
     font-size: 2em;
 }
 
@@ -301,12 +301,7 @@ button {
 * Correct the inability to style buttons in iOS and Safari.
 */
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-    -webkit-appearance: button;
-}
+
 
 /**
 * 1. Change the inconsistent appearance in all browsers (opinionated).
@@ -393,13 +388,6 @@ textarea {
 * 2. Correct the outline style in Safari.
 */
 
-[type="search"] {
-    outline-offset: -2px;
-    /* 2 */
-
-    -webkit-appearance: textfield;
-    /* 1 */
-}
 
 /**
 * Correct the cursor style of increment and decrement buttons in Safari.
